@@ -1,9 +1,22 @@
-pipline{
+pipeline {
     agent any
+
     stages {
-        stage('Build'){
-            stepes{
-                sh 'echo "Build complite"'
+        stage('Build') {
+            steps {
+                echo 'Building...'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
             }
         }
     }
